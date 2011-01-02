@@ -8,7 +8,7 @@ before do
   search = Twitter::Search.new
 
   # Find the 3 most recent marriage proposals to @justinbieber
-  @tweets = search.containing("a is for array").result_type("recent").per_page(3)
+  @tweets = search.containing("#aisforarray").result_type("recent").per_page(3)
 end
 
 not_found do
