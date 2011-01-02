@@ -19,18 +19,6 @@ get '/' do
   erb :'static/home'
 end
 
-get '/contact-us/?' do
-  erb :'static/contact'
-end
-
 get '/help/?' do
   erb :'static/help'
-end
-
-get '/did-you-know/?' do
-  erb :'static/dyk'
-end
-
-get '/resources/?' do
-  erb :'static/resources'
 end
