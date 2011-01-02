@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SleepyDriver: The iPhone App</title>
+<meta name="description" content="Sleepy Driver is an iPhone app to raise awareness for the drowsy driving epidemic" />
+<meta name="keywords" content="" />
+<link href="/styles/sleepy.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="content">
+		<div class="info">
+			<h1 class="header"><a href="/">The iPhone App</a></h1>
+			<%= yield %>
+			<div class="actions">
+				<a href="#" class="button_appstore fader" title="Coming Soon">Coming Soon</a>
+				<a href="#" class="button_read_more fader" title="Watch a Demo">Watch a Demo</a>
+			</div>
+		</div>
+		
+		<div class="phone">
+			<div class="iphone_image">
+				<img src="images/temp_overlay_iphone.png" alt="" />
+			</div>
+		</div>
+	</div>
+	
+	<div id="badge"></div>
+	
+	<div id="more">
+		<div class="twitter">
+			<div class="headline">
+				<h4>Sleepy Driver on Twitter</h4>
+				<a href="http://www.twitter.com/sleepydriverapp" class="follow fader" title="Follow us">Follow us</a>
+			</div>
+			<% @tweets.each do |tweet| %>
+				<p><%= tweet.text %></p>
+			<% end %>
+		</div>
+		
+		<div class="quote">
+			<div class="headline">
+				<h4>Simple, yet effective.</h4>
+			</div>
+			<p>Getting home safe is priority #1.  This app will help.</p>
+			<span class="quote_by"><a href="#">Me</a></span>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div class="alignleft"><p>Copyright &copy; <%= Time.new.year %> <a href="http://morethanaprogrammer.com" title="Company name">More than a Programmer</a>  All Rights reserved.</p></div>
+		<div class="alignright">
+			<a href="/resources" title="Resources">Resources</a>
+			<span class="divider"></span>
+			<a href="/did-you-know" title="Did You Know?">Did You Know?</a>
+			<span class="divider"></span>
+			<a href="/help" title="Help and support">Help &amp; Support</a>
+		</div>
+	</div>
+	<div id="warning">
+		Driving while drowsy is incredibly dangerous.  If you are to drowsy to drive, please pull off the road.
+		This app is meant as a tool for entertainment and awareness purposes only.
+	</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20507898-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
